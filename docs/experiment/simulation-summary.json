@@ -1,0 +1,650 @@
+{
+  "label": "Synthetic research simulation; no BMS actuation or measured ventilation data",
+  "seeds": [
+    20260929,
+    20260930,
+    20260931,
+    20260932,
+    20260933,
+    20260934,
+    20260935,
+    20260936,
+    20260937,
+    20260938,
+    20260939,
+    20260940,
+    20260941,
+    20260942,
+    20260943,
+    20260944,
+    20260945,
+    20260946,
+    20260947,
+    20260948
+  ],
+  "trainingSeeds": "1000–1119 (synthetic, separate from evaluation seeds)",
+  "volumeM3": 284.321,
+  "assumedParameters": {
+    "stepMinutes": 5,
+    "widthM": 5.9,
+    "lengthM": 7.9,
+    "heightM": 6.1,
+    "outdoorCo2Ppm": 420,
+    "co2GenerationM3PerHourPerson": 0.018,
+    "targetCo2Ppm": 800,
+    "initialCo2Ppm": 600,
+    "airflowChoicesM3h": [
+      100,
+      200,
+      300,
+      450,
+      600
+    ],
+    "fixedAirflowM3h": 300
+  },
+  "meanAcross20Days": {
+    "fixed": {
+      "occupiedMinutesAboveTarget": 22.3,
+      "peakCo2Ppm": 807.7,
+      "meanOccupiedCo2Ppm": 629.2,
+      "totalOutdoorAirM3": 7200,
+      "airflowChanges": 0
+    },
+    "reactive": {
+      "occupiedMinutesAboveTarget": 0,
+      "peakCo2Ppm": 676,
+      "meanOccupiedCo2Ppm": 601.7,
+      "totalOutdoorAirM3": 3989,
+      "airflowChanges": 8.8
+    },
+    "predictive": {
+      "occupiedMinutesAboveTarget": 41.5,
+      "peakCo2Ppm": 806,
+      "meanOccupiedCo2Ppm": 711.2,
+      "totalOutdoorAirM3": 2890.5,
+      "airflowChanges": 12.8
+    }
+  },
+  "perDay": [
+    {
+      "seed": 20260929,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 64,
+          "occupiedMinutesAboveTarget": 55,
+          "peakCo2Ppm": 885,
+          "meanOccupiedCo2Ppm": 679,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 64,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 686,
+          "meanOccupiedCo2Ppm": 630,
+          "totalOutdoorAirM3": 4200,
+          "airflowChanges": 8
+        },
+        "predictive": {
+          "occupiedSteps": 64,
+          "occupiedMinutesAboveTarget": 15,
+          "peakCo2Ppm": 806,
+          "meanOccupiedCo2Ppm": 752,
+          "totalOutdoorAirM3": 3083,
+          "airflowChanges": 13
+        }
+      }
+    },
+    {
+      "seed": 20260930,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 19,
+          "occupiedMinutesAboveTarget": 35,
+          "peakCo2Ppm": 866,
+          "meanOccupiedCo2Ppm": 723,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 19,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 682,
+          "meanOccupiedCo2Ppm": 628,
+          "totalOutdoorAirM3": 3192,
+          "airflowChanges": 2
+        },
+        "predictive": {
+          "occupiedSteps": 19,
+          "occupiedMinutesAboveTarget": 15,
+          "peakCo2Ppm": 804,
+          "meanOccupiedCo2Ppm": 730,
+          "totalOutdoorAirM3": 2696,
+          "airflowChanges": 5
+        }
+      }
+    },
+    {
+      "seed": 20260931,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 55,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 748,
+          "meanOccupiedCo2Ppm": 577,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 55,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 655,
+          "meanOccupiedCo2Ppm": 566,
+          "totalOutdoorAirM3": 3442,
+          "airflowChanges": 8
+        },
+        "predictive": {
+          "occupiedSteps": 55,
+          "occupiedMinutesAboveTarget": 5,
+          "peakCo2Ppm": 800,
+          "meanOccupiedCo2Ppm": 638,
+          "totalOutdoorAirM3": 2650,
+          "airflowChanges": 3
+        }
+      }
+    },
+    {
+      "seed": 20260932,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 77,
+          "occupiedMinutesAboveTarget": 80,
+          "peakCo2Ppm": 901,
+          "meanOccupiedCo2Ppm": 625,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 77,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 711,
+          "meanOccupiedCo2Ppm": 598,
+          "totalOutdoorAirM3": 4392,
+          "airflowChanges": 8
+        },
+        "predictive": {
+          "occupiedSteps": 77,
+          "occupiedMinutesAboveTarget": 100,
+          "peakCo2Ppm": 810,
+          "meanOccupiedCo2Ppm": 700,
+          "totalOutdoorAirM3": 3167,
+          "airflowChanges": 12
+        }
+      }
+    },
+    {
+      "seed": 20260933,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 49,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 762,
+          "meanOccupiedCo2Ppm": 541,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 49,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 649,
+          "meanOccupiedCo2Ppm": 537,
+          "totalOutdoorAirM3": 3575,
+          "airflowChanges": 8
+        },
+        "predictive": {
+          "occupiedSteps": 49,
+          "occupiedMinutesAboveTarget": 10,
+          "peakCo2Ppm": 804,
+          "meanOccupiedCo2Ppm": 605,
+          "totalOutdoorAirM3": 2596,
+          "airflowChanges": 7
+        }
+      }
+    },
+    {
+      "seed": 20260934,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 63,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 786,
+          "meanOccupiedCo2Ppm": 619,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 63,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 684,
+          "meanOccupiedCo2Ppm": 595,
+          "totalOutdoorAirM3": 3758,
+          "airflowChanges": 11
+        },
+        "predictive": {
+          "occupiedSteps": 63,
+          "occupiedMinutesAboveTarget": 50,
+          "peakCo2Ppm": 807,
+          "meanOccupiedCo2Ppm": 701,
+          "totalOutdoorAirM3": 2833,
+          "airflowChanges": 15
+        }
+      }
+    },
+    {
+      "seed": 20260935,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 41,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 788,
+          "meanOccupiedCo2Ppm": 599,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 41,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 663,
+          "meanOccupiedCo2Ppm": 598,
+          "totalOutdoorAirM3": 3408,
+          "airflowChanges": 6
+        },
+        "predictive": {
+          "occupiedSteps": 41,
+          "occupiedMinutesAboveTarget": 30,
+          "peakCo2Ppm": 810,
+          "meanOccupiedCo2Ppm": 712,
+          "totalOutdoorAirM3": 2600,
+          "airflowChanges": 5
+        }
+      }
+    },
+    {
+      "seed": 20260936,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 65,
+          "occupiedMinutesAboveTarget": 40,
+          "peakCo2Ppm": 847,
+          "meanOccupiedCo2Ppm": 599,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 65,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 658,
+          "meanOccupiedCo2Ppm": 578,
+          "totalOutdoorAirM3": 4058,
+          "airflowChanges": 8
+        },
+        "predictive": {
+          "occupiedSteps": 65,
+          "occupiedMinutesAboveTarget": 20,
+          "peakCo2Ppm": 804,
+          "meanOccupiedCo2Ppm": 676,
+          "totalOutdoorAirM3": 2875,
+          "airflowChanges": 12
+        }
+      }
+    },
+    {
+      "seed": 20260937,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 76,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 791,
+          "meanOccupiedCo2Ppm": 661,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 76,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 682,
+          "meanOccupiedCo2Ppm": 625,
+          "totalOutdoorAirM3": 4642,
+          "airflowChanges": 10
+        },
+        "predictive": {
+          "occupiedSteps": 76,
+          "occupiedMinutesAboveTarget": 80,
+          "peakCo2Ppm": 807,
+          "meanOccupiedCo2Ppm": 771,
+          "totalOutdoorAirM3": 3175,
+          "airflowChanges": 22
+        }
+      }
+    },
+    {
+      "seed": 20260938,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 42,
+          "occupiedMinutesAboveTarget": 10,
+          "peakCo2Ppm": 816,
+          "meanOccupiedCo2Ppm": 648,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 42,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 678,
+          "meanOccupiedCo2Ppm": 612,
+          "totalOutdoorAirM3": 3750,
+          "airflowChanges": 6
+        },
+        "predictive": {
+          "occupiedSteps": 42,
+          "occupiedMinutesAboveTarget": 35,
+          "peakCo2Ppm": 807,
+          "meanOccupiedCo2Ppm": 732,
+          "totalOutdoorAirM3": 2804,
+          "airflowChanges": 12
+        }
+      }
+    },
+    {
+      "seed": 20260939,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 47,
+          "occupiedMinutesAboveTarget": 35,
+          "peakCo2Ppm": 871,
+          "meanOccupiedCo2Ppm": 616,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 47,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 684,
+          "meanOccupiedCo2Ppm": 600,
+          "totalOutdoorAirM3": 3625,
+          "airflowChanges": 8
+        },
+        "predictive": {
+          "occupiedSteps": 47,
+          "occupiedMinutesAboveTarget": 10,
+          "peakCo2Ppm": 802,
+          "meanOccupiedCo2Ppm": 700,
+          "totalOutdoorAirM3": 2746,
+          "airflowChanges": 5
+        }
+      }
+    },
+    {
+      "seed": 20260940,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 66,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 692,
+          "meanOccupiedCo2Ppm": 568,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 66,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 643,
+          "meanOccupiedCo2Ppm": 576,
+          "totalOutdoorAirM3": 3679,
+          "airflowChanges": 12
+        },
+        "predictive": {
+          "occupiedSteps": 66,
+          "occupiedMinutesAboveTarget": 15,
+          "peakCo2Ppm": 801,
+          "meanOccupiedCo2Ppm": 695,
+          "totalOutdoorAirM3": 2633,
+          "airflowChanges": 9
+        }
+      }
+    },
+    {
+      "seed": 20260941,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 71,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 695,
+          "meanOccupiedCo2Ppm": 619,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 71,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 653,
+          "meanOccupiedCo2Ppm": 603,
+          "totalOutdoorAirM3": 4233,
+          "airflowChanges": 8
+        },
+        "predictive": {
+          "occupiedSteps": 71,
+          "occupiedMinutesAboveTarget": 40,
+          "peakCo2Ppm": 805,
+          "meanOccupiedCo2Ppm": 741,
+          "totalOutdoorAirM3": 2792,
+          "airflowChanges": 14
+        }
+      }
+    },
+    {
+      "seed": 20260942,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 63,
+          "occupiedMinutesAboveTarget": 5,
+          "peakCo2Ppm": 813,
+          "meanOccupiedCo2Ppm": 639,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 63,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 694,
+          "meanOccupiedCo2Ppm": 609,
+          "totalOutdoorAirM3": 4263,
+          "airflowChanges": 12
+        },
+        "predictive": {
+          "occupiedSteps": 63,
+          "occupiedMinutesAboveTarget": 80,
+          "peakCo2Ppm": 809,
+          "meanOccupiedCo2Ppm": 702,
+          "totalOutdoorAirM3": 3021,
+          "airflowChanges": 22
+        }
+      }
+    },
+    {
+      "seed": 20260943,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 64,
+          "occupiedMinutesAboveTarget": 45,
+          "peakCo2Ppm": 883,
+          "meanOccupiedCo2Ppm": 620,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 64,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 685,
+          "meanOccupiedCo2Ppm": 593,
+          "totalOutdoorAirM3": 3908,
+          "airflowChanges": 11
+        },
+        "predictive": {
+          "occupiedSteps": 64,
+          "occupiedMinutesAboveTarget": 20,
+          "peakCo2Ppm": 808,
+          "meanOccupiedCo2Ppm": 676,
+          "totalOutdoorAirM3": 2917,
+          "airflowChanges": 6
+        }
+      }
+    },
+    {
+      "seed": 20260944,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 41,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 701,
+          "meanOccupiedCo2Ppm": 597,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 41,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 663,
+          "meanOccupiedCo2Ppm": 586,
+          "totalOutdoorAirM3": 3596,
+          "airflowChanges": 6
+        },
+        "predictive": {
+          "occupiedSteps": 41,
+          "occupiedMinutesAboveTarget": 25,
+          "peakCo2Ppm": 806,
+          "meanOccupiedCo2Ppm": 703,
+          "totalOutdoorAirM3": 2554,
+          "airflowChanges": 9
+        }
+      }
+    },
+    {
+      "seed": 20260945,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 43,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 723,
+          "meanOccupiedCo2Ppm": 600,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 43,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 648,
+          "meanOccupiedCo2Ppm": 607,
+          "totalOutdoorAirM3": 3592,
+          "airflowChanges": 9
+        },
+        "predictive": {
+          "occupiedSteps": 43,
+          "occupiedMinutesAboveTarget": 15,
+          "peakCo2Ppm": 802,
+          "meanOccupiedCo2Ppm": 739,
+          "totalOutdoorAirM3": 2633,
+          "airflowChanges": 13
+        }
+      }
+    },
+    {
+      "seed": 20260946,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 69,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 798,
+          "meanOccupiedCo2Ppm": 657,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 69,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 692,
+          "meanOccupiedCo2Ppm": 621,
+          "totalOutdoorAirM3": 4562,
+          "airflowChanges": 11
+        },
+        "predictive": {
+          "occupiedSteps": 69,
+          "occupiedMinutesAboveTarget": 65,
+          "peakCo2Ppm": 809,
+          "meanOccupiedCo2Ppm": 740,
+          "totalOutdoorAirM3": 3088,
+          "airflowChanges": 18
+        }
+      }
+    },
+    {
+      "seed": 20260947,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 78,
+          "occupiedMinutesAboveTarget": 70,
+          "peakCo2Ppm": 951,
+          "meanOccupiedCo2Ppm": 683,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 78,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 717,
+          "meanOccupiedCo2Ppm": 634,
+          "totalOutdoorAirM3": 4800,
+          "airflowChanges": 10
+        },
+        "predictive": {
+          "occupiedSteps": 78,
+          "occupiedMinutesAboveTarget": 90,
+          "peakCo2Ppm": 811,
+          "meanOccupiedCo2Ppm": 749,
+          "totalOutdoorAirM3": 3367,
+          "airflowChanges": 20
+        }
+      }
+    },
+    {
+      "seed": 20260948,
+      "policies": {
+        "fixed": {
+          "occupiedSteps": 85,
+          "occupiedMinutesAboveTarget": 70,
+          "peakCo2Ppm": 836,
+          "meanOccupiedCo2Ppm": 714,
+          "totalOutdoorAirM3": 7200,
+          "airflowChanges": 0
+        },
+        "reactive": {
+          "occupiedSteps": 85,
+          "occupiedMinutesAboveTarget": 0,
+          "peakCo2Ppm": 693,
+          "meanOccupiedCo2Ppm": 637,
+          "totalOutdoorAirM3": 5104,
+          "airflowChanges": 13
+        },
+        "predictive": {
+          "occupiedSteps": 85,
+          "occupiedMinutesAboveTarget": 110,
+          "peakCo2Ppm": 808,
+          "meanOccupiedCo2Ppm": 761,
+          "totalOutdoorAirM3": 3579,
+          "airflowChanges": 34
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "zb202-occupancy-co2-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test src/experiment/model.test.js",
+    "results": "node scripts/generate-results.mjs"
+  }
+}

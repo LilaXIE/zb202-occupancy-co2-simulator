@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZB202 · 人数与 CO₂ 预测控制实验</title>
+  <link rel="stylesheet" href="src/experiment/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a href="https://github.com/LYUml/ZB202_DT">← 原项目仓库</a><span>ZB202 / Research prototype</span></header>
+    <section class="hero">
+      <div><p class="eyebrow">SIMULATION · NO PHYSICAL CONTROL</p><h1>人数、CO₂ 与通风控制实验</h1><p>用可复现的模拟人数比较固定通风、当前人数响应和预测控制。VAV 风量均为暂定的有效室外空气流量；页面不会向现场设备下发指令。</p><p class="simulation-note">仿真说明：实测 CO₂ 仅可作为初始值；人数与后续 CO₂ 均为模拟结果。</p></div>
+    </section>
+    <section class="controls" aria-label="仿真参数">
+      <label>场景随机种子 <input id="seed" type="number" min="1" max="4294967295" step="1" value="20260929"></label>
+      <label>初始 CO₂ (ppm) <input id="initial-co2" type="number" min="350" max="3000" step="1" value="600"></label>
+      <button id="run" type="button">重新运行仿真</button>
+      <button id="use-live" type="button" disabled>使用最新实测 CO₂</button>
+      <span id="live-status" role="status">正在检查本地数据桥接…</span>
+    </section>
+    <section class="occupancy-inspector" aria-label="模拟人数时间轴">
+      <div class="occupancy-heading"><div><p class="eyebrow">SIMULATED OCCUPANCY · 0–10 PEOPLE</p><h2>模拟人数</h2><p>拖动时间轴查看每个五分钟时刻的人数；这是生成的实验场景，不是 VS341 实测人数。</p></div><div class="occupancy-current" aria-live="polite"><span id="occupancy-time">--:--</span><strong id="occupancy-count">—</strong><span>人</span></div></div>
+      <div id="occupancy-bars" class="occupancy-bars" aria-hidden="true"></div>
+      <input id="occupancy-step" type="range" min="0" max="287" step="1" value="0" aria-label="选择模拟人数的时间" />
+      <div class="occupancy-axis"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+      <p class="occupancy-summary"><span>当天最多 <strong id="occupancy-peak">—</strong> 人</span><span>累计有人 <strong id="occupancy-minutes">—</strong> 分钟</span></p>
+    </section>
+    <section class="assumptions" aria-label="模型假设">
+      <div><small>房间尺寸</small><strong>5.9 × 7.9 × 6.1 m</strong><span>体积约 284.3 m³</span></div>
+      <div><small>控制步长 / 预测时域</small><strong>5 min / 2 h</strong><span>每步重新预测并优化</span></div>
+      <div><small>暂定有效室外风量</small><strong>100–600 m³/h</strong><span>非 BMS 实测，待 VAV 点位确认</span></div>
+      <div><small>CO₂ 目标</small><strong>800 ppm</strong><span>论文实验目标，可调整</span></div>
+    </section>
+    <section class="panel"><div class="panel-head"><div><p class="eyebrow">SAME OCCUPANCY SCENARIO</p><h2>三种策略比较</h2></div><button id="download" type="button">下载逐步结果 CSV</button></div><div id="summary" class="summary"></div><p class="note">“累计室外空气量”只是通风量代理指标，不等于实际能耗；CO₂ 结果由模拟人数和暂定风量参数计算。</p></section>
+    <section class="panel"><div class="panel-head"><div><p class="eyebrow">24-HOUR TRACE</p><h2>人数与 CO₂ 轨迹</h2></div></div><div class="legend"><span class="people">模拟人数</span><span class="fixed">固定</span><span class="reactive">响应</span><span class="predictive">预测</span><span class="target">800 ppm 目标</span></div><div id="chart" class="chart" role="img" aria-label="模拟人数与三种策略的 CO₂ 时间序列图"></div></section>
+    <section class="panel details"><h2>方法与数据边界</h2><p>人数轨迹由固定随机种子产生；时变马尔可夫转移矩阵仅由另外 120 条模拟训练日估计，不使用评价日的未来人数。预测控制用 32 条候选轨迹的束搜索近似求解未来 24 个五分钟步骤，仅采纳第一个建议风量，然后滚动重算。</p><p>CO₂ 使用单区完全混合质量守恒模型。室外 CO₂ 暂定 420 ppm，人员生成率采用论文的 0.018 m³/(h·人)。有效室外风量候选值为 100、200、300、450、600 m³/h。未取得 VAV 实测风量、新风比例、现场人数和控制权限前，这些结果只用于算法验证。</p><p>现场接入顺序：BMS 点位与权限确认 → 只读风量趋势 → 小幅人工阶跃试验与参数辨识 → 影子模式建议 → 经批准的限幅写入。不得将本页面输出直接用于控制实验室通风。</p></section>
+  </main>
+  <script type="module" src="src/experiment/app.js"></script>
+</body>
+</html>
