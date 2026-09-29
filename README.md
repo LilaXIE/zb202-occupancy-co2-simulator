@@ -1,6 +1,6 @@
 # ZB202 Occupancy and CO2 Control Simulator
 
-Standalone research prototype for comparing fixed ventilation, current occupancy response, and predictive ventilation control in a single-zone ZB202 simulation. The page never writes to a VAV or BMS.
+Standalone research prototype for comparing fixed ventilation, current occupancy response, and predictive ventilation control in a single-zone ZB202 simulation. ZB202 currently has no independent VAV; ventilation is managed through the AHU and an independent outdoor-air damper. The page never writes to the AHU, damper, or BMS.
 
 ## Open the page
 
