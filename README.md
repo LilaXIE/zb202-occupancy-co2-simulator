@@ -4,11 +4,12 @@ Standalone research prototype for comparing fixed ventilation, current occupancy
 
 ## Open the page
 
-Run a local static server from this directory, for example `python -m http.server 8000`, then open `http://127.0.0.1:8000/`. The default simulation works offline. If the original ZB202 InfluxDB bridge is running locally on port 8787, the page may offer a recent measured CO2 reading as a manually selected initial value. No credentials are stored here.
+Open `index.html` directly in Chrome, or run a local static server from this directory, for example `python -m http.server 8000`, then open `http://127.0.0.1:8000/`. The default simulation works offline. If the original ZB202 InfluxDB bridge is running locally on port 8787, the page may offer a recent measured CO2 reading as a manually selected initial value. No credentials are stored here.
 
 ## Reproduce the outputs
 
 - `npm run test` checks occupancy bounds, forecast probabilities, CO2 mass balance, and policy inputs.
+- `npm run build:browser` regenerates the classic browser script used by `index.html`. Commit it after changing `model.js` or `app.js` so the page works when opened with `file://`.
 - `npm run results` regenerates `docs/experiment/simulation-summary.json` and `docs/experiment/representative-day.csv` from fixed seeds. Node.js 20 or newer is sufficient; no npm install is required.
 - See [method and assumptions](docs/experiment/README.md) and the [Word execution report](docs/experiment/ZB202_execution_report.docx).
 

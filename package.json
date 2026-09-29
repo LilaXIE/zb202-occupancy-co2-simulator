@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:browser": "node scripts/build-browser.mjs",
     "test": "node --test src/experiment/model.test.js",
     "results": "node scripts/generate-results.mjs"
   }

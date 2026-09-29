@@ -36,6 +36,6 @@
     <section class="panel"><div class="panel-head"><div><p class="eyebrow">24-HOUR TRACE</p><h2>人数与 CO₂ 轨迹</h2></div></div><div class="legend"><span class="people">模拟人数</span><span class="fixed">固定</span><span class="reactive">响应</span><span class="predictive">预测</span><span class="target">800 ppm 目标</span></div><div id="chart" class="chart" role="img" aria-label="模拟人数与三种策略的 CO₂ 时间序列图"></div></section>
     <section class="panel details"><h2>方法与数据边界</h2><p>人数轨迹由固定随机种子产生；时变马尔可夫转移矩阵仅由另外 120 条模拟训练日估计，不使用评价日的未来人数。预测控制用 32 条候选轨迹的束搜索近似求解未来 24 个五分钟步骤，仅采纳第一个建议风量，然后滚动重算。</p><p>CO₂ 使用单区完全混合质量守恒模型。室外 CO₂ 暂定 420 ppm，人员生成率采用论文的 0.018 m³/(h·人)。有效室外风量候选值为 100、200、300、450、600 m³/h。未取得 VAV 实测风量、新风比例、现场人数和控制权限前，这些结果只用于算法验证。</p><p>现场接入顺序：BMS 点位与权限确认 → 只读风量趋势 → 小幅人工阶跃试验与参数辨识 → 影子模式建议 → 经批准的限幅写入。不得将本页面输出直接用于控制实验室通风。</p></section>
   </main>
-  <script type="module" src="src/experiment/app.js"></script>
+  <script defer src="src/experiment/standalone.js"></script>
 </body>
 </html>
